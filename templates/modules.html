@@ -12,7 +12,7 @@
                 font-family: Arial; font-weight: 900;
             }
             div {
-                background-color:rgb(255, 99, 71);
+                background-color:rgb(255, 200, 180);
                 width: 200px;
                 height: 350px;
                 border-radius: 15px;
@@ -48,7 +48,7 @@
             <tbody><tr style="max-height: 250px;">
             {% for dict in l %}
                 <td>
-                    <a href="/send-email"><div> {% for x in dict %} <p>{{x}} -> {{dict[x]}}</p> {% endfor %} </div></a>
+                    <a href="/send-email"><div> {% for x in dict %} <p>{{x}}: {{dict[x]}}</p> {% endfor %} </div></a>
                 </td>
             {% endfor %}
             </tr>
