@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            body {
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://pbs.twimg.com/media/E9O5Q0JWQAQOZ4a.jpg:large");
+                background-size:cover;
+                background-repeat: repeat-y;
+            }
+            h1 {
+                font-family: Arial; font-weight: 900;
+            }
+            div {
+                background-color:rgb(255, 99, 71);
+                width: 200px;
+                height: 350px;
+                border-radius: 15px;
+                justify-content: left;
+                align-content: left;
+                align-items: left;
+                padding: 5px;
+                margin: 15px;
+              }
+            p {
+                justify-content: left;
+                align-content: left;
+                align-items: left;
+            }
+            h2 {
+                font-family: Arial; font-weight: 900;
+                color: aliceblue;
+            }
+            
+            a {
+              color: black;
+              text-decoration: none;
+            }
+        </style>
+        <title>UCL Lecture Crashers</title>
+    </head>
+    <body align="center">
+        <h1 text align="left"><a href="/course_finder"> UCL Lecture Crashers</a></h1>
+        <h2>Course: {{course}}</h2>
+        <h2>Year/Difficulty: {{year}}</h2>
+        
+        <table align="center">
+            <tbody><tr style="max-height: 250px;">
+            {% for dict in l %}
+                <td>
+                    <a href="/send-email"><div> {% for x in dict %} <p>{{x}} -> {{dict[x]}}</p> {% endfor %} </div></a>
+                </td>
+            {% endfor %}
+            </tr>
+        </tbody></table>
+    </body>
+</html>

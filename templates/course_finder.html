@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            .logolink {
+                margin: 10px;
+                text-decoration: none;
+            }
+            a:link, a:visited {
+                color: #33cccc;
+            }
+            body {
+                background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://pbs.twimg.com/media/E9O5Q0JWQAQOZ4a.jpg:large");
+                color: aliceblue;
+            }
+            h1 {
+                font-family: 'Arvo', serif; font-weight: 700;
+            }
+            h2 {
+                font-family: Arial; font-weight: 900;
+                color: #d9d9d9;
+            }
+            .center-div {
+                margin-top: 8rem;
+                text-align: center;
+            }
+            .welcome-text {
+                font-size: 3rem;
+            }
+            .myButton {
+                margin-top: 10px;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+        </style>
+        <title>Welcome to Course Finder!</title>
+    </head>
+    <body text align="center">
+        <form method="POST">
+            <h1 text align="left"><a class="logolink" href="/course_finder"> UCL Lecture Crashers</a></h1>
+            <br>
+            <br>
+            <br>
+            <div class="center-div">
+                <h1 class="welcome-text">Welcome {{name}}!</h1>
+                <h2>Start selecting courses to crash now:</h2>
+                <br>
+                Course Name <input type="text" id="course" name="course"><br><br>
+                <label for="year">Year/Difficulty</label>
+                <select name="year" id="year"><br>
+                {% for i in l %}
+                    <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+                </select>
+            <br>
+            <br>
+            <a href="/module-selector"><button class="myButton" type="submit">Search</button></a>
+            </div>
+        </form>
+        
+    </body>
+</html>
