@@ -13,6 +13,6 @@ It kind of works.
 How to build an MVP to pitch.
 ## What's next for UCL Lecture Crashers
 This could be developed further in accordance with UCL guidelines to streamline the process of auditing courses at ease.
-##Requirements
+## Requirements
  - flask, requests, pandas, spacy, numpy (install using pip)
  - enter the following command: python -m spacy download en_core_web_md
