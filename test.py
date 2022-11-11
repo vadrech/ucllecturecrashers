@@ -2,7 +2,7 @@ from flask import Flask, redirect, request
 import requests
 app = Flask(__name__)
 
-client_id = '7993613939801141.5837972735640426'
+client_id = '################-###############'
 url = f"https://uclapi.com/oauth/authorise/?client_id={client_id}&state=1"
 
 @app.route("/callback")
