@@ -6,9 +6,9 @@ import numpy as np
 # import datetime
 app = Flask(__name__)
 token = None
-client_id = '7993613939801141.5837972735640426'
+client_id = '################.#################'
 url = f"https://uclapi.com/oauth/authorise/?client_id={client_id}&state=1"
-client_secret = "e7926d66972661804ea229c464f6f1831499189ad3e5ac553ea2a6cc6b3e4c22"
+client_secret = "###############################################################"
 user_data = {}
 token = ""
 course = ""
